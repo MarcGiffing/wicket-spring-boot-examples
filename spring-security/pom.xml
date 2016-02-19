@@ -8,11 +8,11 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<artifactId>spring-security</artifactId>
-	
+
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>com.giffing.wicket.spring.boot.starter</groupId>
@@ -24,5 +24,28 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**</include>
+				</includes>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+	</build>
 
 </project>
