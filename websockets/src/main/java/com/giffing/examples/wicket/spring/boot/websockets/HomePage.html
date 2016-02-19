@@ -1,0 +1,21 @@
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<title>Wicket!</title>
+	</head>
+	<body>
+		<div class="container">
+				<form wicket:id="form">
+					<input type="text" wicket:id="chatInput" />
+					<button wicket:id="send">Send</button>
+				</form>
+				
+				<div wicket:id="chatContainer">
+					<ul wicket:id="chat">
+						<li wicket:id="message" />
+					</ul>
+				</div>
+				
+			<wicket:child/>
+		</div>
+	</body>
+</html>
