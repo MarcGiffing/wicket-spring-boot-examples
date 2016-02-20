@@ -10,6 +10,7 @@
 		<module>simple</module>
 		<module>spring-security</module>
 		<module>websockets</module>
+		<module>bootstrap</module>
 	</modules>
 
 
