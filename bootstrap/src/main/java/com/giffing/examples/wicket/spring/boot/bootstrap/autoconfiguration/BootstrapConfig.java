@@ -25,10 +25,11 @@ public class BootstrapConfig implements WicketApplicationInitConfiguration {
 	
 	@Override
 	public void init(WebApplication webApplication) {
-		Bootstrap.install(webApplication, prop);
-		
 		final ThemeProvider themeProvider = new BootswatchThemeProvider(prop.getTheme());
 		prop.setThemeProvider(themeProvider);
+
+		Bootstrap.install(webApplication, prop);
+		
 		
 		BootstrapLess.install(webApplication);
 	}

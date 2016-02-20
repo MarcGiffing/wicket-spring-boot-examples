@@ -10,6 +10,8 @@ public class BootstrapProperties extends BootstrapSettings {
 
 	public static final String PROPERTY_PREFIX = "wicket.external.agilcoders.bootstrap";
 	
+	private boolean enabled = true;
+	
 	private BootswatchTheme theme = BootswatchTheme.Sandstone;
 
 	public BootswatchTheme getTheme() {
@@ -18,6 +20,14 @@ public class BootstrapProperties extends BootstrapSettings {
 
 	public void setTheme(BootswatchTheme theme) {
 		this.theme = theme;
+	}
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
 	}
 	
 }
