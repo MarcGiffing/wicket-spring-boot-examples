@@ -19,13 +19,13 @@ import org.apache.wicket.protocol.ws.api.WebSocketRequestHandler;
 import org.apache.wicket.protocol.ws.api.message.IWebSocketPushMessage;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 
-import com.giffing.wicket.spring.boot.starter.web.config.WebSocketEventHandler;
+import com.giffing.wicket.spring.boot.starter.web.servlet.websocket.WebSocketMessageBroadcaster;
 
 
 public class HomePage extends WebPage {
 	
 	@SpringBean
-	private WebSocketEventHandler broadcaster;
+	private WebSocketMessageBroadcaster broadcaster;
 	
 	private ListView<String> chatList;
 
