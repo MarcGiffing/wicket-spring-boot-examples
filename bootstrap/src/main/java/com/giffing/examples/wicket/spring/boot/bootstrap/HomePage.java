@@ -8,6 +8,7 @@ public class HomePage extends BasePage {
 
 	public HomePage(PageParameters parameters) {
 		super(parameters);
+		
 	}
 
 }

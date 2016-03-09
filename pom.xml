@@ -11,6 +11,7 @@
 		<module>spring-security</module>
 		<module>websockets</module>
 		<module>bootstrap</module>
+		<module>internal-tests</module>
 	</modules>
 
 
