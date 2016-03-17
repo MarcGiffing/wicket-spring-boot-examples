@@ -12,6 +12,7 @@
 		<module>websockets</module>
 		<module>bootstrap</module>
 		<module>internal-tests</module>
+		<module>annotationscan</module>
 	</modules>
 
 
