@@ -1,4 +1,4 @@
-package com.giffing.examples.wicket.spring.boot.websockets;
+package com.giffing.examples.wicket.spring.boot.websockets.pages;
 
 import java.util.ArrayList;
 
@@ -19,9 +19,10 @@ import org.apache.wicket.protocol.ws.api.WebSocketRequestHandler;
 import org.apache.wicket.protocol.ws.api.message.IWebSocketPushMessage;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 
+import com.giffing.wicket.spring.boot.context.scan.WicketHomePage;
 import com.giffing.wicket.spring.boot.starter.web.servlet.websocket.WebSocketMessageBroadcaster;
 
-
+@WicketHomePage
 public class HomePage extends WebPage {
 	
 	@SpringBean

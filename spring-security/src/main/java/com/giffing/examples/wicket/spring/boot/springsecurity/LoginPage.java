@@ -10,7 +10,9 @@ import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
+import com.giffing.wicket.spring.boot.context.scan.WicketSignInPage;
 
+@WicketSignInPage
 public class LoginPage extends WebPage {
 
 	public LoginPage(PageParameters parameters) {

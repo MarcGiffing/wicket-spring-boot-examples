@@ -1,4 +1,4 @@
-package com.giffing.examples.wicket.spring.boot.websockets;
+package com.giffing.examples.wicket.spring.boot.websockets.pages;
 
 import org.apache.wicket.protocol.ws.api.message.IWebSocketPushMessage;
 
