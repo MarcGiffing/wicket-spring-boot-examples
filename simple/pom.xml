@@ -13,7 +13,7 @@
 		<dependency>
 			<groupId>com.giffing.wicket.spring.boot.starter</groupId>
 			<artifactId>wicket-spring-boot-starter</artifactId>
-			<version>0.0.13</version>
+			<version>0.0.14</version>
 		</dependency>
 	</dependencies>
 
