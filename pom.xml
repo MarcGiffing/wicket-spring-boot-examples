@@ -13,6 +13,7 @@
 		<module>bootstrap</module>
 		<module>internal-tests</module>
 		<module>annotationscan</module>
+		<module>devtools</module>
 	</modules>
 
 
