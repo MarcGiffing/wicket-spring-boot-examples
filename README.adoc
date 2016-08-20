@@ -4,23 +4,17 @@ Provides some example projects to show what the Wicket Spring Boot Starter proje
 
 ## Project List:
 
-### Basic simple example
-link:/simple[Simple]
-
-### Websocket
-link:/websockets[Native Websocket Support]
-
-### Devtools  
-link:/devtools[Devtools]
-
-### annotationscan  
-link:/annotationscan[Annotationscan]
-
-### Spring Security
-link:/spring-security[Spring Security]
-
-### Internal Tests
-link:/internal-tests[Internal tests]
-
-### Bootstrap
-link:/bootstrap[Bootstrap]
+* Basic simple example - link:/simple[simple]
+** Minimal project setup with only a single HomePage.
+* Devtools - link:/devtools[devtools]
+** Added Sprinb Boot Devtools to auto reload the application on class changes.
+* Websocket - link:/websockets[websockets]
+** Example project with native Websocket support. Open the Page in two browser tabs and fill the input.
+* Annotationscan - link:/annotationscan[annotationscan]
+** Example of Wicketstuffs Annotationscann
+* Spring Security - link:/spring-security[spring-security]
+** Autoconfiguration of Spring Security
+* Bootstrap - link:/bootstrap[bootstrap]
+** Example of using https://github.com/l0rdn1kk0n/wicket-bootstrap
+* Internal Tests - link:/internal-tests[internal-tests]
+** Only used for my internal tests
