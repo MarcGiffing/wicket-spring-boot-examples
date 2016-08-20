@@ -6,8 +6,10 @@ Provides some example projects to show what the Wicket Spring Boot Starter proje
 
 * Basic simple example - link:/simple[simple]
 ** Minimal project setup with only a single HomePage.
-* Devtools - link:/devtools[devtools]
+* Spring Boot Devtools - link:/devtools[devtools]
 ** Added Sprinb Boot Devtools to auto reload the application on class changes.
+* Spring Boot Actuator - link:/spring-actuator[spring-actuator]
+** Adds a Wicket specific Wicket endpoint (http://localhost:8080/wicket) with information of the auto configuration
 * Websocket - link:/websockets[websockets]
 ** Example project with native Websocket support. Open the Page in two browser tabs and fill the input.
 * Annotationscan - link:/annotationscan[annotationscan]
