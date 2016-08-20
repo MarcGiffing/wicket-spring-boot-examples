@@ -1,1 +1,0 @@
-# wicket-spring-boot-examples

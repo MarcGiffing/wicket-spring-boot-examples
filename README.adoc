@@ -1,0 +1,26 @@
+# wicket-spring-boot-examples
+
+Provides some example projects to show what the Wicket Spring Boot Starter project can do.
+
+## Project List:
+
+### Basic simple example
+link:/simple[Simple]
+
+### Websocket
+link:/websockets[Native Websocket Support]
+
+### Devtools  
+link:/devtools[Devtools]
+
+### annotationscan  
+link:/annotationscan[Annotationscan]
+
+### Spring Security
+link:/spring-security[Spring Security]
+
+### Internal Tests
+link:/internal-tests[Internal tests]
+
+### Bootstrap
+link:/bootstrap[Bootstrap]
