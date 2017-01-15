@@ -4,20 +4,20 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.0.RELEASE</version>
+		<version>1.4.3.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<artifactId>websockets</artifactId>
 
 	<properties>
-		<wicket.version>7.3.0</wicket.version>
+		<wicket.version>7.6.0</wicket.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.giffing.wicket.spring.boot.starter</groupId>
 			<artifactId>wicket-spring-boot-starter</artifactId>
-			<version>0.0.16</version>
+			<version>1.0.3</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.wicket</groupId>

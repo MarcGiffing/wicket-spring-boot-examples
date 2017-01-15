@@ -1,0 +1,5 @@
+wicket:
+  core:
+    settings:
+      general:
+        configuration-type: development
