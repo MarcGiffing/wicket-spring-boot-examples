@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.giffing.examples.wicket.spring.boot</groupId>
 	<artifactId>wicket-spring-boot-parent</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.5</version>
 	<packaging>pom</packaging>
 	
 	<modules>
