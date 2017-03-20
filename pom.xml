@@ -15,6 +15,7 @@
 		<module>annotationscan</module>
 		<module>devtools</module>
 		<module>spring-actuator</module>
+		<module>shiro-security</module>
 	</modules>
 
 
