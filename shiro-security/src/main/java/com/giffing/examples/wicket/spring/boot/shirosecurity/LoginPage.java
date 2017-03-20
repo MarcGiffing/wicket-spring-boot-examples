@@ -15,15 +15,23 @@ import org.apache.wicket.markup.html.form.RequiredTextField;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
+import org.wicketstuff.annotation.mount.MountPath;
 
 import com.giffing.wicket.spring.boot.context.scan.WicketSignInPage;
 
 @WicketSignInPage
+@MountPath("login")
 public class LoginPage extends WebPage {
 
 	public LoginPage(PageParameters parameters) {
 		super( parameters );
 
+		final Subject currentUser = SecurityUtils.getSubject();
+		if(currentUser.isAuthenticated()) {
+			continueToOriginalDestination();
+			setResponsePage( SecondPage.class );
+		}
+		
 		add( new LoginForm( "loginForm" ) );
 	}
 
@@ -44,7 +52,8 @@ public class LoginPage extends WebPage {
 		@Override
 		protected void onSubmit() {
 			if ( login( username, password, false ) ) {
-				setResponsePage( new HomePage() );
+				continueToOriginalDestination();
+				setResponsePage( SecondPage.class );
 			}
 			else {
 				error( "Login failed" );
