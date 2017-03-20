@@ -19,7 +19,8 @@ import com.giffing.wicket.spring.boot.context.extensions.WicketApplicationInitCo
 @Component
 @Configuration
 public class ShiroInitializer implements WicketApplicationInitConfiguration {
-    @Bean
+    
+	@Bean
     @SuppressWarnings("Duplicates")
     Realm getTextConfigurationRealm() {
         TextConfigurationRealm realm = new TextConfigurationRealm();
@@ -32,33 +33,12 @@ public class ShiroInitializer implements WicketApplicationInitConfiguration {
         realm.setCachingEnabled(true);
         return realm;
     }
+    
     @Bean
     ShiroFilterChainDefinition shiroFilterChainDefinition() {
         return new DefaultShiroFilterChainDefinition();
     }
-    @Bean
-    EventBusAwareObject eventBusAwareObject() {
-        return new EventBusAwareObject();
-    }
-    @Bean
-    SubscribedListener subscribedListener() {
-        return new SubscribedListener();
-    }
-    public static class EventBusAwareObject implements EventBusAware {
-        private EventBus eventBus;
-        
-        public void setEventBus(EventBus bus) {
-            this.eventBus = bus;
-        }
-        public EventBus getEventBus() {
-            return eventBus;
-        }
-    }
-    public static class SubscribedListener {
-        @Subscribe
-        public void onEvent(Object object) {
-        }
-    }
+
     public void init(WebApplication app) {
         AnnotationsShiroAuthorizationStrategy authz = new AnnotationsShiroAuthorizationStrategy();
         app.getSecuritySettings().setAuthorizationStrategy(authz);
