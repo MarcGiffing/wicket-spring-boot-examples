@@ -20,3 +20,5 @@ Provides some example projects to show what the Wicket Spring Boot Starter proje
 ** Example of using https://github.com/l0rdn1kk0n/wicket-bootstrap
 * Internal Tests - link:/internal-tests[internal-tests]
 ** Only used for my internal tests
+* Cluster - link:/cluster[cluster]
+** Using Zuul as a loadbalancer. Using hazelcast for session and page replication

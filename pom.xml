@@ -16,6 +16,7 @@
 		<module>devtools</module>
 		<module>spring-actuator</module>
 		<module>shiro-security</module>
+		<module>cluster</module>
 	</modules>
 
 

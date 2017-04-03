@@ -1,0 +1,9 @@
+zuul:
+  routes:
+    wicket:
+      path: /**
+      serviceId: wicketservice
+
+wicketservice:
+  ribbon:
+    listOfServers: localhost:8081,localhost:8082
