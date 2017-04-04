@@ -1,3 +1,6 @@
 logging:
   level:
     org.wicketstuff.datastores.hazelcast: debug
+    org.apache.wicket.page: debug
+    org.apache.wicket.page.Session: debug
+    org.apache.wicket.pageStore: debug

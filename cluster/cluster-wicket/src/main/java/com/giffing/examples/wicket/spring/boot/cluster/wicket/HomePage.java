@@ -33,7 +33,7 @@ public class HomePage extends WebPage {
 
 			@Override
 			public void onClick(AjaxRequestTarget target) {
-				counter.incrementAndGet();
+				System.out.println( counter.incrementAndGet());
 				target.add( counterLabel );
 			}
 		};

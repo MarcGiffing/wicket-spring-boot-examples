@@ -1,1 +1,7 @@
-TODO: The HomePage is opened on two instances with the same page id. The counter link is increasing the counter label. If you're on the same instance the counter is increased. If you change the instance, the first counter link click refreshes the counter instead of incrementing it.
+Zuul : 'Loadbalancer' with sticky session
+Thanks to https://github.com/alejandro-du/vaadin-microservices-demo
+https://github.com/alejandro-du/vaadin-microservices-demo/blob/master/proxy-server/src/main/java/com/example/StickySessionRule.java
+
+Spring Session Hazelcast for session replication
+
+Wicketstuff Datastore Hazelcast for page replication

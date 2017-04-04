@@ -1,5 +1,6 @@
 package com.giffing.examples.wicket.spring.boot.cluster.wicket;
 
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.Bean;
@@ -7,6 +8,7 @@ import org.springframework.session.hazelcast.HazelcastSessionRepository;
 import org.springframework.session.hazelcast.PrincipalNameExtractor;
 import org.springframework.session.hazelcast.config.annotation.web.http.EnableHazelcastHttpSession;
 
+import com.giffing.wicket.spring.boot.starter.WicketAutoConfiguration;
 import com.hazelcast.config.Config;
 import com.hazelcast.config.MapAttributeConfig;
 import com.hazelcast.config.MapIndexConfig;
@@ -38,4 +40,5 @@ public class WicketApplication {
 
              return Hazelcast.newHazelcastInstance(config); 
      }
+	 
 }

@@ -1,3 +1,7 @@
+spring:
+  session:
+    store-type: hazelcast
+
 zuul:
   routes:
     wicket:

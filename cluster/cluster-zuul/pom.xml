@@ -11,6 +11,17 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>com.giffing.wicket.spring.boot.starter</groupId>
+			<artifactId>wicket-spring-boot-starter</artifactId>
+			<version>1.0.5</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>org.apache.*</artifactId>
+					<groupId>*</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 			<version>1.5.2.RELEASE</version>
@@ -24,7 +35,23 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session-hazelcast</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast</artifactId>
+			<version>3.8</version>
+		</dependency>
 	</dependencies>
 	
 	
