@@ -1,7 +1,21 @@
-Zuul : 'Loadbalancer' with sticky session
-Thanks to https://github.com/alejandro-du/vaadin-microservices-demo
-https://github.com/alejandro-du/vaadin-microservices-demo/blob/master/proxy-server/src/main/java/com/example/StickySessionRule.java
+= Spring Boot & Apache Wicket in a Clustered Environment
 
-Spring Session Hazelcast for session replication
+This project is using https://github.com/Netflix/zuul[Zuul] as a https://en.wikipedia.org/wiki/Reverse_proxy[reverse proxy]
+for a Wicket backend. Cause https://ci.apache.org/projects/wicket/guide/7.x/single.html#_lost_in_redirection_with_apache_wicket[Wicket doesn't work with a load balancer] when using the REDIRECT\_TO\_BUFFER strategy we have to use sticky sessions to redirect the user to the same instance. I've found a https://github.com/alejandro-du/vaadin-microservices-demo[vaadin demo] project which uses a https://github.com/alejandro-du/vaadin-microservices-demo[custom round robin rule] which is reused in this project.
 
-Wicketstuff Datastore Hazelcast for page replication
+Zuul can be used with Eureka to automatically detects the running instances. This project uses hard coded URLs in the application.properties. To check if the instances are up and running the Netflix PingUrl class is used. PingUrl checks if a specific URL of each instance is available. If not the server is removed from the list of available servers and is not used for load balancing.
+
+For the session replication http://projects.spring.io/spring-session/[Spring Session] is used with hazelcast as a provider. So if you're logged in on one instance you're logged in on all instances.
+
+The last missing thing is the page store which also have to be clustered. In this project https://github.com/wicketstuff/core/wiki/DataStores#hazelcast[Wicketstuff Datastore Hazelelcast] is used so that each instance shares the same page stores.
+
+== Run the examples
+
+Zuul				: *mvn spring-boot:run -f cluster-zuul/pom.xml -Dserver.port=8080*
+
+Wicket Instance 1	: *mvn spring-boot:run -f cluster-wicket/pom.xml -Dserver.port=8081*
+
+Wicket Instance 2	: *mvn spring-boot:run -f cluster-wicket/pom.xml -Dserver.port=8082*
+
+
+If you shutdown one instance all users which are sticked to that instance are 'load balanced' to another instance.

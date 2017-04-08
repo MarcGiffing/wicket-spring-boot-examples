@@ -3,11 +3,18 @@ spring:
     store-type: hazelcast
 
 zuul:
+  add-host-header: true
+  sensitiveHeaders: 
+  add-proxy-headers: true
+  
   routes:
     wicket:
       path: /**
       serviceId: wicketservice
+      
 
 wicketservice:
   ribbon:
+    sensitiveHeaders: 
+    NFLoadBalancerPingClassName: com.giffing.examples.wicket.spring.boot.cluster.zuul.SpringBootPing
     listOfServers: localhost:8081,localhost:8082

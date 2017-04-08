@@ -25,7 +25,6 @@ public class StickySessionRule extends ClientConfigEnabledRoundRobinRule {
         Optional<Cookie> cookie = getCookie();
 
         if (cookie.isPresent()) {
-        	System.out.println( "cookie present" );
             Cookie hash = cookie.get();
             List<Server> servers = getLoadBalancer().getReachableServers();
             Optional<Server> serverFound = servers.stream()
@@ -33,7 +32,6 @@ public class StickySessionRule extends ClientConfigEnabledRoundRobinRule {
                     .findFirst();
 
             if (serverFound.isPresent()) {
-            	System.out.println( "server found" );
                 return serverFound.get();
             }
         }
@@ -44,7 +42,6 @@ public class StickySessionRule extends ClientConfigEnabledRoundRobinRule {
     private Optional<Cookie> getCookie() {
         Cookie[] cookies = RequestContext.getCurrentContext().getRequest().getCookies();
         if (cookies != null) {
-            System.out.println( "find coockie " + cookies );
         	return Arrays.stream(cookies)
                     .filter(c -> c.getName().equals(COOKIE_NAME))
                     .findFirst();
@@ -54,7 +51,6 @@ public class StickySessionRule extends ClientConfigEnabledRoundRobinRule {
     }
 
     private Server addServer(Object key) {
-    	System.out.println( "add server" + key );
         Server server = super.choose(key);
         Cookie newCookie = new Cookie(COOKIE_NAME, "" + server.hashCode());
         newCookie.setPath("/");

@@ -9,15 +9,17 @@ import org.apache.wicket.markup.html.form.RequiredTextField;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
+import org.wicketstuff.annotation.mount.MountPath;
 
 import com.giffing.wicket.spring.boot.context.scan.WicketSignInPage;
 
 @WicketSignInPage
+@MountPath("login")
 public class LoginPage extends WebPage {
 
 	public LoginPage(PageParameters parameters) {
 		super(parameters);
-
+		System.out.println( "call login" );
 		if (((AbstractAuthenticatedWebSession) getSession()).isSignedIn()) {
 			setResponsePage(new HomePage());
 		}
@@ -40,6 +42,7 @@ public class LoginPage extends WebPage {
 
 		@Override
 		protected void onSubmit() {
+			System.out.println( "login try" );
 			AuthenticatedWebSession session = AuthenticatedWebSession.get();
 			if (session.signIn(username, password)) {
 				setResponsePage(new HomePage());
