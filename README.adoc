@@ -22,3 +22,6 @@ Provides some example projects to show what the Wicket Spring Boot Starter proje
 ** Only used for my internal tests
 * Cluster - link:/cluster[cluster]
 ** Using Zuul as a loadbalancer. Using hazelcast for session and page replication
+* Deploy to Servlet Container as war file
+ ** link:/simple-war[war]
+ ** link:/simple-war-webscocket[war-websockets]
