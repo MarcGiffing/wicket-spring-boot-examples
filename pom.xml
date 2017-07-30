@@ -17,6 +17,8 @@
 		<module>spring-actuator</module>
 		<module>shiro-security</module>
 		<module>cluster</module>
+		<module>simple-war</module>
+		<module>simple-war-websocket</module>
 	</modules>
 
 
