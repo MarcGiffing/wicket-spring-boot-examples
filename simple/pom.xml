@@ -4,12 +4,12 @@
 	<parent>
 		<groupId>com.giffing.wicket.spring.boot.starter</groupId>
 		<artifactId>wicket-spring-boot-starter-parent</artifactId>
-		<version>1.0.5</version>
+		<version>1.0.10</version>
 	</parent>
 	<artifactId>simple</artifactId>
 
 	<properties>
-		<wicket.version>7.6.0</wicket.version>
+		<wicket.version>7.9.0</wicket.version>
 	</properties>
 
 	<dependencies>

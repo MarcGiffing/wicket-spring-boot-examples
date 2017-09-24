@@ -4,20 +4,20 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.2.RELEASE</version>
+		<version>1.5.7.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<artifactId>bootstrap</artifactId>
 	
 	<properties>
-		<wicket-bootstrap.version>0.10.11</wicket-bootstrap.version>
+		<wicket-bootstrap.version>0.10.16</wicket-bootstrap.version>
 	</properties>
 	
 	<dependencies>
 		<dependency>
 			<groupId>com.giffing.wicket.spring.boot.starter</groupId>
 			<artifactId>wicket-spring-boot-starter</artifactId>
-			<version>1.0.5</version>
+			<version>1.0.10</version>
 		</dependency>
 		<dependency>
 			<groupId>de.agilecoders.wicket</groupId>
@@ -42,6 +42,25 @@
 			<artifactId>wicket-bootstrap-themes</artifactId>
 			<version>${wicket-bootstrap.version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.wicket</groupId>
+			<artifactId>wicket-extensions</artifactId>
+			<version>7.9.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.wicket</groupId>
+			<artifactId>wicket-request</artifactId>
+			<version>7.9.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.wicket</groupId>
+			<artifactId>wicket-util</artifactId>
+			<version>7.9.0</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
